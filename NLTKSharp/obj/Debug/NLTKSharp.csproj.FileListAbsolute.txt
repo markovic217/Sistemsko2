@@ -1,0 +1,16 @@
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\bin\Debug\NLTKSharp.dll
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\bin\Debug\NLTKSharp.pdb
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\obj\Debug\NLTKSharp.csproj.AssemblyReference.cache
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\obj\Debug\NLTKSharp.Properties.Resources.resources
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\obj\Debug\NLTKSharp.csproj.GenerateResource.cache
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\obj\Debug\NLTKSharp.csproj.CoreCompileInputs.cache
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\obj\Debug\NLTKSharp.dll
+C:\Users\gornj\Downloads\NLTKSharp-master\NLTKSharp\obj\Debug\NLTKSharp.pdb
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\bin\Debug\NLTKSharp.dll
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\bin\Debug\NLTKSharp.pdb
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\obj\Debug\NLTKSharp.csproj.AssemblyReference.cache
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\obj\Debug\NLTKSharp.Properties.Resources.resources
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\obj\Debug\NLTKSharp.csproj.GenerateResource.cache
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\obj\Debug\NLTKSharp.csproj.CoreCompileInputs.cache
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\obj\Debug\NLTKSharp.dll
+C:\Users\gornj\Desktop\Sistemsko\DrugiProjekat\NLTKSharp\obj\Debug\NLTKSharp.pdb
