@@ -42,7 +42,7 @@ namespace DrugiProjekat
             {
                 commentSubject = new Subject<string>();
             }
-            public void GetComments(string videoId)
+            public void GetComments(string videoId, HttpListenerContext context)
             {
                 string apiKey = "AIzaSyAyDMPdbLoNYUS-a-gKAmWxnkZQoi-8XoU";
                 HttpClient client = new HttpClient();
@@ -63,11 +63,24 @@ namespace DrugiProjekat
                             string post = comment["snippet"]["topLevelComment"]["snippet"]["textOriginal"];
                             commentSubject.OnNext(post);
                         }
-
+                        context.Response.StatusCode = (int)HttpStatusCode.OK;
+                        context.Response.ContentType = "text/plain";
+                        string data = $"Status code: {(int)HttpStatusCode.OK}.\n Uspesno poslat zahtev";
+                        byte[] buffer = Encoding.UTF8.GetBytes(data);
+                        context.Response.ContentLength64 = buffer.Length;
+                        context.Response.OutputStream.Write(buffer, 0, buffer.Length);
+                        context.Response.Close();
                     }
-                    catch (Exception e)
-                    {
+                    catch (HttpRequestException e)
+                    {               
                         Console.WriteLine($"Doslo je do greske: {e.Message}");
+                        context.Response.StatusCode = (int)e.StatusCode;
+                        context.Response.ContentType = "text/plain";
+                        string data = $"Status code: {(int)e.StatusCode}.\n {e.Message}";
+                        byte[] buffer = Encoding.UTF8.GetBytes(data);
+                        context.Response.ContentLength64 = buffer.Length;
+                        context.Response.OutputStream.Write(buffer, 0, buffer.Length);
+                        context.Response.Close();
                     }
                 });
             }
@@ -179,14 +192,7 @@ namespace DrugiProjekat
                 string videoId = context.Request.Url.ToString().Substring(server.Length);
                 Task task = Task.Run(() =>
                 {
-                    commentStream.GetComments(videoId);
-                    context.Response.StatusCode = (int)HttpStatusCode.OK;
-                    context.Response.ContentType = "text/plain";
-                    string data = $"Status code: {(int)HttpStatusCode.OK}.\n Uspesno poslat zahtev";
-                    byte[] buffer = Encoding.UTF8.GetBytes(data);
-                    context.Response.ContentLength64 = buffer.Length;
-                    context.Response.OutputStream.Write(buffer, 0, buffer.Length);
-                    context.Response.Close();
+                    commentStream.GetComments(videoId, context);                  
                 });
             }
         }
